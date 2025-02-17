@@ -241,8 +241,7 @@ user_pref("gfx.canvas.accelerated", true);
 
 user_pref("browser.cache.disk.enable", false);
 user_pref("network.trr.disable-ECS", false);
-user_pref("urlclassifier.trackingSkipURLs", "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com, *.zadn.vn, *.facebook.com, connect.facebook.net");
-user_pref("urlclassifier.features.socialtracking.skipURLs", "*.instagram.com, *.twitter.com, *.twimg.com, *.fbcdn.net, *.facebook.com, connect.facebook.net");
+user_pref("browser.contentblocking.category", "standard");
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
