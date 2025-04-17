@@ -211,7 +211,30 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+// PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
+user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
+user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
+user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
 
+// PREF: restore Top Sites on New Tab page
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", true);
+
+// PREF: remove default Top Sites (Facebook, Twitter, etc.)
+// This does not block you from adding your own.
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
+
+// PREF: remove sponsored content on New Tab page
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // Sponsored shortcuts 
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Recommended by Pocket
+user_pref("browser.newtabpage.activity-stream.showSponsored", false); // Sponsored Stories
+
+// PREF: show weather on New Tab page
+user_pref("browser.newtabpage.activity-stream.showWeather", true);
+
+user_pref("browser.cache.disk.enable", false);
+user_pref("network.trr.disable-ECS", false);
+user_pref("urlclassifier.trackingSkipURLs", "embed.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com, *.zadn.vn, connect.facebook.net, static.licdn.com, www.facebook.com, www.instagram.com, www.linkedin.com");
+user_pref("urlclassifier.features.socialtracking.skipURLs", "*.twitter.com, *.twimg.com, *.fbcdn.net, connect.facebook.net, static.licdn.com, www.facebook.com, www.instagram.com, www.linkedin.com");
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
@@ -219,7 +242,12 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
 
-
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("mousewheel.min_line_scroll_amount", 10); // adjust this number to your liking; default=5
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 80); // default=50
+user_pref("general.smoothScroll.currentVelocityWeighting", "0.15"); // default=.25
+user_pref("general.smoothScroll.stopDecelerationWeighting", "0.6"); // default=.4
 
 /****************************************************************************
  * END: BETTERFOX                                                           *
