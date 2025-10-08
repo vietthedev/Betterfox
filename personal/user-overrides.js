@@ -19,7 +19,16 @@
 
 /** FASTFOX ***/
 user_pref("browser.sessionstore.restore_pinned_tabs_on_demand", true);
-user_pref("browser.sessionhistory.max_total_viewers", 4); // only remember # of pages in Back-Forward cache
+
+// SPECULATIVE LOADING WITHOUT PREDICTOR
+user_pref("network.http.speculative-parallel-limit", 20);
+//user_pref("network.dns.disablePrefetch", false);
+//user_pref("network.dns.disablePrefetchFromHTTPS", false);
+//user_pref("dom.prefetch_dns_for_anchor_https_document", true); 
+user_pref("browser.urlbar.speculativeConnect.enabled", true);
+user_pref("browser.places.speculativeConnect.enabled", true);
+user_pref("network.prefetch-next", true);
+
 user_pref("network.http.max-persistent-connections-per-server", 20); // increase download connections
 
 /** SECUREFOX ***/
@@ -45,6 +54,9 @@ user_pref("identity.fxaccounts.enabled", false); // disable Firefox Sync
 user_pref("browser.firefox-view.feature-tour", "{\"screen\":\"\",\"complete\":true}"); // disable the Firefox View tour from popping up for new profiles
 user_pref("accessibility.force_disabled", 1); // disable Accessibility features
 user_pref("security.cert_pinning.enforcement_level", 2); // strict public key pinning
+user_pref("captivedetect.canonicalURL", ""); // disable captive portal detection
+user_pref("network.captive-portal-service.enabled", false); // disable captive portal detection
+user_pref("network.connectivity-service.enabled", false); // disable captive portal detection
 
 /** PESKYFOX ***/
 user_pref("devtools.accessibility.enabled", false); // removes un-needed "Inspect Accessibility Properties" on right-click
