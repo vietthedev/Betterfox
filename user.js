@@ -224,6 +224,9 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // PREF: revert back to Standard ETP
 user_pref("browser.contentblocking.category", "standard");
 
+// PREF: restore search engine suggestions
+user_pref("browser.search.suggest.enabled", true);
+
 // PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
