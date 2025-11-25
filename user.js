@@ -221,9 +221,6 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
-// PREF: revert back to Standard ETP
-user_pref("browser.contentblocking.category", "standard");
-
 // PREF: restore search engine suggestions
 user_pref("browser.search.suggest.enabled", true);
 
